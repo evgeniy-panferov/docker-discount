@@ -1,0 +1,8 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: postgresql-db
+  namespace: external
+spec:
+  type: ExternalName
+  externalName: localhost:5432

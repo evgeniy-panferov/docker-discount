@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tg-discount-service #set name also service name
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /discount-service
+            pathType: Prefix
+            backend:
+              service:
+                name: discount-service
+                port:
+                  number: 8081
+    - http:
+        paths:
+          - path: /tg-discount-service
+            pathType: Prefix
+            backend:
+              service:
+                name: tg-discount-service
+                port:
+                  number: 8080
