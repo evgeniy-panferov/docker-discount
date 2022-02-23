@@ -32,6 +32,17 @@ spec:
     spec:
       containers:
         - name: tg-discount-service
-          image: evgeniypnf/tg-discount-test
+          image: evgeniypnf/tg-discount-service
           ports:
             - containerPort: 8080  # The port that the container is running on in the cluster
+          env:
+            - name: botUsername
+              valueFrom:
+                secretKeyRef:
+                  name: tg-discount-secret
+                  key: botUsername
+            - name: botToken
+              valueFrom:
+                secretKeyRef:
+                  name: tg-discount-secret
+                  key: botToken
