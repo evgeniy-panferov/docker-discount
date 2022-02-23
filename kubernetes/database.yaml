@@ -1,8 +1,14 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: postgresql-db
-  namespace: external
+  name: postgres
+  namespace: default
 spec:
   type: ExternalName
-  externalName: localhost:5432
+  # https://docs.docker.com/docker-for-mac/networking/#use-cases-and-workarounds
+  externalName: host.docker.internal
+  ports:
+    - name: port
+      port: 5432
+
+#db not work

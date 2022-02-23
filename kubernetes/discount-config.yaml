@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+ name: discount-config
+ namespace: default
+data:
+ host: localhost

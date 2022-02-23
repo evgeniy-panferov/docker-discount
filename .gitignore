@@ -1,1 +1,3 @@
 /.idea/
+/kubernetes/secret/discount-secret.yaml
+/kubernetes/secret/tg-discount-secret.yaml
