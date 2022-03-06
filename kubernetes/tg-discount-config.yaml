@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
- name: discount-config
+ name: tg-discount-config
  namespace: default
 data:
- host: 10.108.62.79
+ external: http://discount-service

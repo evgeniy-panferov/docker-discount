@@ -1,6 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
+  namespace: default
   name: tg-discount-service #set name also service name
   annotations:
     kubernetes.io/ingress.class: nginx

@@ -36,6 +36,11 @@ spec:
           ports:
             - containerPort: 8080  # The port that the container is running on in the cluster
           env:
+            - name: external
+              valueFrom:
+                configMapKeyRef:
+                  key: external
+                  name: tg-discount-config
             - name: botUsername
               valueFrom:
                 secretKeyRef:
