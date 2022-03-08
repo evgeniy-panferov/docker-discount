@@ -4,4 +4,4 @@ metadata:
  name: tg-discount-config
  namespace: default
 data:
- external: http://discount-service
+ external: http://localhost/discount-service
